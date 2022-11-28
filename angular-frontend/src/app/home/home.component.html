@@ -1,0 +1,25 @@
+<body class="home">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/home">Logo</a>
+          <ul class="navbar-nav ms-auto flex-nowrap">
+            
+              <div style="cursor: pointer; background-color: skyblue;" (click)="home()" class="nav-link m-2 menu-item nav-active"><b>Home</b></div>
+              <div style="cursor: pointer; background-color: skyblue;" (click)="login()" class="nav-link m-2 menu-item nav-active"><b>Login</b></div>
+              <div style="cursor: pointer; background-color: skyblue;" (click)="about()" class="nav-link m-2 menu-item nav-active"><b>About</b></div>
+          
+        
+          </ul>
+        </div>
+      </nav>
+
+<div class="container">
+	<div class="sliders">
+		<ng-container *ngFor="let img of img_list; let i = index">
+			<div class="slider" *ngIf="current == i" @fade>
+				<img class="img" [src]="img">
+			</div>
+		</ng-container>
+	</div>
+</div>
+</body>
